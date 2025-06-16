@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>{{ info.name }}</h1>
+  <h2>{{ info.title }}</h2>
+  <p><strong>Ubicación:</strong> {{ info.location }}</p>
+  <p><strong>Email:</strong> <a [href]="'mailto:' + info.email">{{ info.email }}</a></p>
+  <p><strong>Teléfono:</strong> {{ info.phone }}</p>
+  <p><strong>GitHub:</strong> <a [href]="info.github" target="_blank">{{ info.github }}</a></p>
+  <p><strong>LinkedIn:</strong> <a [href]="info.linkedin" target="_blank">{{ info.linkedin }}</a></p>
+
+  <h3>Resumen</h3>
+  <p>{{ info.summary }}</p>
+
+  <h3>Idiomas</h3>
+  <ul>
+    <li *ngFor="let lang of info.languages">{{ lang }}</li>
+  </ul>
+
+  <h3>Habilidades</h3>
+  <ul>
+    <li><strong>Lenguajes:</strong> {{ info.skills.languages.join(', ') }}</li>
+    <li><strong>Frameworks:</strong> {{ info.skills.frameworks.join(', ') }}</li>
+    <li><strong>Bases de datos:</strong> {{ info.skills.databases.join(', ') }}</li>
+    <li><strong>Herramientas:</strong> {{ info.skills.tools.join(', ') }}</li>
+    <li><strong>Metodologías:</strong> {{ info.skills.methodologies.join(', ') }}</li>
+  </ul>
+
+  <h3>Proyectos</h3>
+  <ul>
+    <li *ngFor="let p of info.projects">{{ p }}</li>
+  </ul>
+
+  <h3>Experiencia laboral</h3>
+  <div *ngFor="let exp of info.experience">
+    <p><strong>{{ exp.role }}</strong> - {{ exp.company }}</p>
+    <p><small>{{ exp.date }}</small></p>
+  </div>
+
+  <h3>Educación</h3>
+  <div *ngFor="let edu of info.education">
+    <p><strong>{{ edu.degree }}</strong> - {{ edu.institution }}</p>
+    <p><small>{{ edu.period }}</small></p>
+  </div>Conversor Word a HTML
+
+  <h3>Certificaciones</h3>
+  <div *ngFor="let cer of info.certification">
+    <p><strong>{{ cer.name }}</strong> - {{ cer.institution }}</p>
+    <p><small>{{ cer.period }}</small></p>
+  </div>
+</div>
