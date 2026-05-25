@@ -29,8 +29,8 @@ export class CvMauricioEnComponent {
     projects: [
       'Classroom Manager (C#, SQL, Entity Framework)',
       'Shoe Store (CodeIgniter, PHP, SQL, HTML, CSS, Bootstrap)',
-      'Word to HTML (Python)',
-      'Basic CRUD (Angular, .NET)',
+      'Rental Price Predictor in Resistencia (Python)',
+      'Vivi\'s Coffee website (Angular, supabase)',
       'Calculator with Turing Machines (Python)'
     ],
     experience: [

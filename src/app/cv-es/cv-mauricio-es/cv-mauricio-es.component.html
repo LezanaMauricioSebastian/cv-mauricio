@@ -15,6 +15,21 @@
     <li *ngFor="let lang of info.languages">{{ lang }}</li>
   </ul>
 
+  <h3>Experiencia laboral</h3>
+  <div *ngFor="let exp of info.experience">
+    <p><strong>{{ exp.role }}</strong> - {{ exp.company }}</p>
+    <p><small>{{ exp.date }}</small></p>
+  </div>
+  <h3>Educación</h3>
+  <div *ngFor="let edu of info.education">
+    <p><strong>{{ edu.degree }}</strong> - {{ edu.institution }}</p>
+    <p><small>{{ edu.period }}</small></p>
+  </div>
+  <h3>Certificaciones</h3>
+  <div *ngFor="let cer of info.certification">
+    <p><strong>{{ cer.name }}</strong> - {{ cer.institution }}</p>
+    <p><small>{{ cer.period }}</small></p>
+  </div>
   <h3>Habilidades</h3>
   <ul>
     <li><strong>Lenguajes:</strong> {{ info.skills.languages.join(', ') }}</li>
@@ -29,21 +44,5 @@
     <li *ngFor="let p of info.projects">{{ p }}</li>
   </ul>
 
-  <h3>Experiencia laboral</h3>
-  <div *ngFor="let exp of info.experience">
-    <p><strong>{{ exp.role }}</strong> - {{ exp.company }}</p>
-    <p><small>{{ exp.date }}</small></p>
-  </div>
 
-  <h3>Educación</h3>
-  <div *ngFor="let edu of info.education">
-    <p><strong>{{ edu.degree }}</strong> - {{ edu.institution }}</p>
-    <p><small>{{ edu.period }}</small></p>
-  </div>
-
-  <h3>Certificaciones</h3>
-  <div *ngFor="let cer of info.certification">
-    <p><strong>{{ cer.name }}</strong> - {{ cer.institution }}</p>
-    <p><small>{{ cer.period }}</small></p>
-  </div>
 </div>

@@ -30,8 +30,8 @@ export class CvMauricioEsComponent {
     projects: [
       'Gestor de Aulas (C#, SQL, Entity Framework)',
       'Tienda de Calzado (CodeIgniter, PHP, SQL, HTML, CSS, Bootstrap)',
-      'Comparador de Predictores de Precios de Alquiler (Python)',
-      'CRUD Básico (Angular, .NET)',
+      'Predictor de Precios de Alquiler en Resistencia (Python)',
+      'Vivi\'s Coffee sitio web (Angular, supabase)',
       'Calculadora con Máquinas de Turing (Python)'
     ],
     experience: [
