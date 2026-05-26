@@ -73,37 +73,57 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Listas (ul) */
-ul {
-  list-style: none; /* Elimina los puntos predeterminados */
+/* Contacto */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 8px 20px;
+  margin-bottom: 20px;
+}
+
+.contact-grid p {
+  margin: 0;
+}
+
+/* Listas destacadas */
+.tag-list {
+  list-style: none;
   padding: 0;
   margin-bottom: 20px;
 }
 
-ul li {
-  background-color: #ecf0f1; /* Fondo suave para cada elemento de lista */
+.tag-list li {
+  background-color: #ecf0f1;
   margin-bottom: 8px;
   padding: 10px 15px;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease-in-out;
 }
 
-ul li:hover {
-  transform: translateX(5px); /* Pequeño desplazamiento al pasar el ratón */
+.tag-list li:hover {
+  transform: translateX(5px);
 }
 
-/* Estilos específicos para secciones como Experiencia y Educación */
-.container > div { /* Apunta a los divs directamente bajo .container para secciones como experiencia y educación */
+/* Secciones tipo ficha */
+.section-item {
   margin-bottom: 20px;
   padding-left: 15px;
-  border-left: 4px solid #3498db; /* Barra azul a la izquierda */
+  border-left: 4px solid #3498db;
 }
 
-.container > div p {
+.section-item p {
   margin: 5px 0;
+}
+
+/* Viñetas internas para descripciones más largas */
+.highlights {
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.highlights li {
+  margin-bottom: 8px;
 }
 
 /* Responsive design (para pantallas más pequeñas) */
@@ -125,6 +145,10 @@ ul li:hover {
   h3 {
     font-size: 1.3em;
     margin-top: 25px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 }
 

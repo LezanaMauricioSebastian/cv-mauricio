@@ -1,49 +1,85 @@
 <div class="container">
-  <h1>{{ info.name }}</h1>
-  <h2>{{ info.title }}</h2>
-  <p><strong>Location:</strong> {{ info.location }}</p>
-  <p><strong>Email:</strong> <a [href]="'mailto:' + info.email">{{ info.email }}</a></p>
-  <p><strong>Phone:</strong> {{ info.phone }}</p>
-  <p><strong>GitHub:</strong> <a [href]="info.github" target="_blank">{{ info.github }}</a></p>
-  <p><strong>LinkedIn:</strong> <a [href]="info.linkedin" target="_blank">{{ info.linkedin }}</a></p>
+  <h1>{{ info.personalInfo.name }}</h1>
+  <h2>{{ info.personalInfo.title }}</h2>
+
+  <div class="contact-grid">
+    <p><strong>Location:</strong> {{ info.personalInfo.location }}</p>
+    <p><strong>Email:</strong> <a href="mailto:{{ info.personalInfo.contact.email }}">{{ info.personalInfo.contact.email }}</a></p>
+    <p><strong>Phone:</strong> {{ info.personalInfo.contact.phone }}</p>
+    <p>
+      <strong>GitHub:</strong>
+      <a href="{{ info.personalInfo.contact.github }}" target="_blank" rel="noreferrer">
+        {{ info.personalInfo.contact.githubLabel }}
+      </a>
+    </p>
+    <p>
+      <strong>LinkedIn:</strong>
+      <a href="{{ info.personalInfo.contact.linkedin }}" target="_blank" rel="noreferrer">
+        {{ info.personalInfo.contact.linkedinLabel }}
+      </a>
+    </p>
+  </div>
 
   <h3>Summary</h3>
   <p>{{ info.summary }}</p>
 
-  <h3>Languages</h3>
-  <ul>
-    <li *ngFor="let lang of info.languages">{{ lang }}</li>
+  <h3>Skills</h3>
+  <ul class="tag-list">
+    @for (skillGroup of info.skills; track skillGroup.label) {
+      <li>
+        <strong>{{ skillGroup.label }}:</strong> {{ skillGroup.items.join(', ') }}
+      </li>
+    }
   </ul>
 
- 
+  <h3>Languages</h3>
+  <ul class="tag-list">
+    @for (lang of info.languages; track lang.language) {
+      <li>{{ lang.language }} - {{ lang.fluency }}</li>
+    }
+  </ul>
 
   <h3>Experience</h3>
-  <div *ngFor="let exp of info.experience">
-    <p><strong>{{ exp.role }}</strong> - {{ exp.company }}</p>
-    <p><small>{{ exp.date }}</small></p>
-  </div>
+  @for (exp of info.experience; track exp.company + exp.position) {
+    <div class="section-item">
+      <p><strong>{{ exp.position }}</strong> - {{ exp.company }}</p>
+      <p><small>{{ exp.startDate }} - {{ exp.endDate }}</small></p>
+      <ul class="highlights">
+        @for (highlight of exp.highlights; track highlight) {
+          <li>{{ highlight }}</li>
+        }
+      </ul>
+    </div>
+  }
 
   <h3>Education</h3>
-  <div *ngFor="let edu of info.education">
-    <p><strong>{{ edu.degree }}</strong> - {{ edu.institution }}</p>
-    <p><small>{{ edu.period }}</small></p>
-  </div>
-  <h3>Certifications</h3>
-  <div *ngFor="let cer of info.certification">
-    <p><strong>{{ cer.name }}</strong> - {{ cer.institution }}</p>
-    <p><small>{{ cer.period }}</small></p>
-  </div>
-<h3>Skills</h3>
-<ul>
-  <li><strong>Languages:</strong> {{ info.skills.languages.join(', ') }}</li>
-  <li><strong>Frameworks:</strong> {{ info.skills.frameworks.join(', ') }}</li>
-  <li><strong>Databases:</strong> {{ info.skills.databases.join(', ') }}</li>
-  <li><strong>Tools:</strong> {{ info.skills.tools.join(', ') }}</li>
-  <li><strong>Methodologies:</strong> {{ info.skills.methodologies.join(', ') }}</li>
-</ul>
+  @for (edu of info.education; track edu.degree) {
+    <div class="section-item">
+      <p><strong>{{ edu.degree }}</strong> - {{ edu.institution }}</p>
+      <p><small>{{ edu.startDate }} - {{ edu.endDate }}</small></p>
+    </div>
+  }
 
-<h3>Projects</h3>
-<ul>
-  <li *ngFor="let p of info.projects">{{ p }}</li>
-</ul>
+  <h3>Certifications</h3>
+  @for (certification of info.certifications; track certification.title) {
+    <div class="section-item">
+      <p><strong>{{ certification.title }}</strong></p>
+      <p>{{ certification.issuer }}</p>
+      <p><small>{{ certification.date }}</small></p>
+    </div>
+  }
+
+  <h3>Projects</h3>
+  @for (project of info.projects; track project.name) {
+    <div class="section-item">
+      <p><strong>{{ project.name }}</strong></p>
+      @if (project.context) {
+        <p><small>{{ project.context }}</small></p>
+      }
+      @if (project.technologies?.length) {
+        <p><strong>Technologies:</strong> {{ project.technologies?.join(', ') }}</p>
+      }
+      <p>{{ project.description }}</p>
+    </div>
+  }
 </div>
