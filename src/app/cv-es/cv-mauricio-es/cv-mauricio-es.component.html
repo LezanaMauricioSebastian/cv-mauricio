@@ -52,6 +52,22 @@
     </div>
   }
 
+  <h3>Experiencia académica</h3>
+  @for (exp of info.academicExperience; track exp.company + exp.position) {
+    <div class="section-item">
+      <p><strong>{{ exp.position }}</strong> - {{ exp.company }}</p>
+      @if (exp.advisor) {
+        <p><small>{{ exp.advisor }}</small></p>
+      }
+      <p><small>{{ exp.startDate }} - {{ exp.endDate }}</small></p>
+      <ul class="highlights">
+        @for (highlight of exp.highlights; track highlight) {
+          <li>{{ highlight }}</li>
+        }
+      </ul>
+    </div>
+  }
+
   <h3>Educación</h3>
   @for (edu of info.education; track edu.degree) {
     <div class="section-item">

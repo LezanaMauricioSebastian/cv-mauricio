@@ -3,9 +3,9 @@
   <h2>{{ info.personalInfo.title }}</h2>
 
   <div class="contact-grid">
-    <p><strong>Location:</strong> {{ info.personalInfo.location }}</p>
-    <p><strong>Email:</strong> <a href="mailto:{{ info.personalInfo.contact.email }}">{{ info.personalInfo.contact.email }}</a></p>
-    <p><strong>Phone:</strong> {{ info.personalInfo.contact.phone }}</p>
+    <p><strong>Sijainti:</strong> {{ info.personalInfo.location }}</p>
+    <p><strong>Sähköposti:</strong> <a href="mailto:{{ info.personalInfo.contact.email }}">{{ info.personalInfo.contact.email }}</a></p>
+    <p><strong>Puhelin:</strong> {{ info.personalInfo.contact.phone }}</p>
     <p>
       <strong>GitHub:</strong>
       <a href="{{ info.personalInfo.contact.github }}" target="_blank" rel="noreferrer">
@@ -20,10 +20,10 @@
     </p>
   </div>
 
-  <h3>Summary</h3>
+  <h3>Yhteenveto</h3>
   <p>{{ info.summary }}</p>
 
-  <h3>Skills</h3>
+  <h3>Osaaminen</h3>
   <ul class="tag-list">
     @for (skillGroup of info.skills; track skillGroup.label) {
       <li>
@@ -32,14 +32,14 @@
     }
   </ul>
 
-  <h3>Languages</h3>
+  <h3>Kielet</h3>
   <ul class="tag-list">
     @for (lang of info.languages; track lang.language) {
       <li>{{ lang.language }} - {{ lang.fluency }}</li>
     }
   </ul>
 
-  <h3>Experience</h3>
+  <h3>Työkokemus</h3>
   @for (exp of info.experience; track exp.company + exp.position) {
     <div class="section-item">
       <p><strong>{{ exp.position }}</strong> - {{ exp.company }}</p>
@@ -52,7 +52,7 @@
     </div>
   }
 
-  <h3>Academic experience</h3>
+  <h3>Akateeminen kokemus</h3>
   @for (exp of info.academicExperience; track exp.company + exp.position) {
     <div class="section-item">
       <p><strong>{{ exp.position }}</strong> - {{ exp.company }}</p>
@@ -68,7 +68,7 @@
     </div>
   }
 
-  <h3>Education</h3>
+  <h3>Koulutus</h3>
   @for (edu of info.education; track edu.degree) {
     <div class="section-item">
       <p><strong>{{ edu.degree }}</strong> - {{ edu.institution }}</p>
@@ -76,7 +76,7 @@
     </div>
   }
 
-  <h3>Certifications</h3>
+  <h3>Sertifikaatit</h3>
   @for (certification of info.certifications; track certification.title) {
     <div class="section-item">
       <p><strong>{{ certification.title }}</strong></p>
@@ -85,7 +85,7 @@
     </div>
   }
 
-  <h3>Projects</h3>
+  <h3>Projektit</h3>
   @for (project of info.projects; track project.name) {
     <div class="section-item">
       <p><strong>{{ project.name }}</strong></p>
@@ -93,7 +93,7 @@
         <p><small>{{ project.context }}</small></p>
       }
       @if (project.technologies?.length) {
-        <p><strong>Technologies:</strong> {{ project.technologies?.join(', ') }}</p>
+        <p><strong>Teknologiat:</strong> {{ project.technologies?.join(', ') }}</p>
       }
       <p>{{ project.description }}</p>
     </div>

@@ -13,8 +13,8 @@ export class CvMauricioEsComponent {
   readonly info = {
     personalInfo: {
       name: 'Mauricio Sebastián Lezana',
-      title: 'Ingeniero de Datos y Desarrollador de Software',
-      location: 'Kouvola, Finlandia (Remoto / UE)',
+      title: 'Desarrollador de Software Junior',
+      location: 'Corrientes, Argentina',
       contact: {
         email: 'lezanamauricio86@gmail.com',
         phone: '+54 9 3795079957',
@@ -24,27 +24,23 @@ export class CvMauricioEsComponent {
         linkedinLabel: 'linkedin.com/in/mauricio-lezana-146681213'
       }
     },
-    summary: `Desarrollador de Software Junior y estudiante universitario con experiencia práctica en ingeniería de datos y web scraping. Apasionado por crear soluciones eficientes con Python, SQL y herramientas de automatización para procesar y transformar grandes volúmenes de datos. Con experiencia en el despliegue de dashboards analíticos modernos, la optimización del rendimiento de sistemas y la integración de soluciones de NLP. Cuento con el título de Analista Programador Universitario y actualmente curso la Licenciatura en Sistemas de Información.`,
+    summary: `Desarrollador de software junior con experiencia práctica en scraping, pipelines de datos y automatización. Trabajo con Python, SQL y Google Cloud (Cloud Run, BigQuery) para recolectar, limpiar y publicar datos; también desarrollo aplicaciones web. Analista Programador Universitario y Licenciado en Sistemas de Información (tesis aprobada y defensa rendida; trámite administrativo pendiente).`,
     skills: [
       {
-        label: 'Ingeniería de Datos y Nube',
-        items: ['Python', 'SQL Server', 'Google Cloud Platform (GCP)', 'BigQuery', 'Odoo', 'Extracción de Datos / Scraping']
+        label: 'Datos y nube',
+        items: ['Python', 'SQL', 'PostgreSQL', 'Google Cloud Platform (Cloud Run, BigQuery)', 'Docker', 'Scraping / ETL', 'MLflow', 'Power BI']
       },
       {
-        label: 'Analítica y Visualización',
-        items: ['Power BI', 'DAX', 'Extracción Inteligente con DB2']
+        label: 'Machine learning y NLP',
+        items: ['scikit-learn', 'LightGBM', 'XGBoost', 'RoBERTuito / transformers', 'BERTopic', 'DSPy']
       },
       {
-        label: 'IA y Aprendizaje Automático',
-        items: ['NLP', 'LLMs', 'BERT', 'DSPy']
+        label: 'Desarrollo de software',
+        items: ['JavaScript', 'TypeScript', 'Java', 'C#', 'PHP', 'HTML', 'CSS']
       },
       {
-        label: 'Desarrollo de Software',
-        items: ['Java', 'C#', 'PHP', 'JavaScript', 'TypeScript', 'HTML', 'CSS']
-      },
-      {
-        label: 'Frameworks y Herramientas',
-        items: ['Angular', 'AngularJS', '.NET', 'Entity Framework', 'CodeIgniter', 'Bootstrap', 'Git', 'GitHub', 'Supabase', 'Virtualizacion Linux con KVM/QEMU']
+        label: 'Frameworks y herramientas',
+        items: ['Angular', 'Supabase', '.NET', 'Entity Framework', 'CodeIgniter', 'Bootstrap', 'Odoo (integraciones)', 'Git', 'GitHub']
       },
       {
         label: 'Metodologías',
@@ -59,56 +55,88 @@ export class CvMauricioEsComponent {
     experience: [
       {
         company: 'SuData',
-        position: 'Ingeniero de Datos',
+        position: 'Ingeniería de Datos',
         startDate: 'Febrero 2025',
         endDate: 'Actualidad',
         highlights: [
-          'Desarrollo y mantenimiento de pipelines de datos utilizando Python, SQL, Google Cloud Platform (GCP) y BigQuery.',
-          'Implementación de rutinas automáticas de matching para sincronizar datos de facturas con registros de la base de datos de Odoo, agilizando directamente las operaciones financieras.',
-          'Diseño y despliegue de dashboards dinámicos en Power BI con medidas DAX complejas para monitorear KPIs administrativos, seguimiento de carga laboral y cuellos de botella operativos.',
-          'Optimización de entornos virtualizados (KVM/QEMU sobre Linux) para cargas de trabajo intensivas con Power BI y Tango Gestión, resolviendo cuellos de botella críticos de CPU mediante virtualización por hardware y drivers VirtIO.'
+          'Desarrollo y mantenimiento de pipelines de datos en Python sobre GCP (Cloud Run, BigQuery, Artifact Registry) para el dominio inmobiliario.',
+          'Scrapers y jobs de extracción/actualización de avisos (Zonaprop, Argenprop y fuentes relacionadas), limpieza, novelty detection y publicación de datos.',
+          'Pipelines de mapas de calor y modelos de precios (Random Forest, LightGBM, XGBoost) con seguimiento en MLflow y despliegue como jobs en Cloud Run.',
+          'Matching automatizado de facturas (FacturIA / ARCA) contra registros en Odoo para agilizar operaciones financieras.',
+          'ETL hacia PostgreSQL a partir de APIs y scrapers (p. ej. Fu.do) para alimentar analítica posterior.',
+          'Uso de Power BI en un entorno virtualizado (VM) para armar reportes y explorar datos operativos.'
         ]
       },
       {
         company: 'GAOTek Inc.',
-        position: 'Data Entry / Publicador de Contenido Web',
+        position: 'Carga de Datos / Publicador de Contenido Web',
         startDate: 'Julio 2024',
         endDate: 'Noviembre 2024',
         highlights: [
-          'Gestión de flujos de publicación de contenido y carga de datos para respaldar operaciones web diarias y actualizaciones de activos digitales.'
+          'Gestión de flujos de publicación de contenido y carga de datos para operaciones web diarias.'
+        ]
+      }
+    ],
+    academicExperience: [
+      {
+        company: 'Observatorio de tecnologías aplicadas a la educación, FaCENA–UNNE (PI 21F010)',
+        position: 'Pasantía de investigación (no rentada)',
+        advisor: 'Dirección: Prof. Flavia Silvana Pucheta; co-dirección: Mgter. María Viviana Godoy',
+        startDate: 'Abril 2026',
+        endDate: 'Mayo 2026',
+        highlights: [
+          'Comparé motores de IA en problemas de métodos numéricos (Newton–Raphson, Gauss–Seidel, interpolación, Simpson 1/3, RK4) con prompts estandarizados.',
+          'Implementé referencias en Python y evalué precisión, calidad de código, explicabilidad y tiempos.',
+          'Documenté alucinaciones numéricas y armé recomendaciones de uso ético / prompt engineering para la cátedra.'
+        ]
+      },
+      {
+        company: 'Métodos Computacionales, Departamento de Informática, FaCENA–UNNE',
+        position: 'Ayudante alumno (adscripción)',
+        advisor: 'Directora: Mgter. María Viviana Godoy Guglielmone',
+        startDate: '2025',
+        endDate: '2026 (1 año)',
+        highlights: [
+          'Actualización de filminas y material teórico-práctico de la cátedra.',
+          'Selección y resolución de ejercicios para las guías de trabajo práctico.',
+          'Exploración de herramientas de IA para algoritmos numéricos y problemas de la materia, con un informe técnico breve.'
         ]
       }
     ],
     projects: [
       {
         name: 'Feedlyze',
-        context: 'Proyecto final universitario',
-        description: 'Integración de capacidades avanzadas de NLP utilizando BERT y DSPy para automatizar el análisis de sentimiento y tópicos, mejorando la gestión de reseñas y la interpretación de datos en bruto.'
+        context: 'Proyecto final de carrera (UNNE)',
+        technologies: ['Python', 'RoBERTuito', 'BERTopic', 'DSPy', 'Angular', 'Supabase'],
+        description: 'Plataforma web para gestión de reputación online: recupera reseñas, clasifica sentimiento con fine-tuning de RoBERTuito, detecta temas con BERTopic y genera/asigna tareas de mejora con un flujo orquestado mediante DSPy.'
       },
       {
-        name: 'Predictor de Precios de Alquiler',
-        technologies: ['Python'],
-        description: 'Desarrollo de scripts complejos de web scraping para extraer, limpiar y procesar datos inmobiliarios de múltiples fuentes y alimentar una lógica predictiva de precios.'
+        name: 'Predictor de precios inmobiliarios',
+        technologies: ['Python', 'scraping', 'ML'],
+        description: 'Extracción, limpieza y modelado de datos de alquiler/venta para estimar precios; base del trabajo posterior de pipelines y modelos en SuData.'
       },
       {
         name: 'Plataforma Vivi\'s Coffee',
         technologies: ['Angular', 'Supabase'],
-        description: 'Desarrollo de una solución e-commerce full stack con Angular y Supabase. Incluye un carrito de compras personalizado y un sistema automatizado de registro de pedidos para apoyar la operación diaria de un pequeño negocio.'
+        description: 'E-commerce full stack con carrito y registro de pedidos para la operación diaria de un pequeño negocio.'
       },
       {
-        name: 'Gestor de Aulas',
-        technologies: ['C#', 'SQL', 'Entity Framework'],
-        description: 'Construcción de un sistema de gestión con C#, SQL y Entity Framework para optimizar la administración de recursos educativos y la programación de espacios.'
+        name: 'Matching FacturIA → Odoo',
+        context: 'SuData',
+        technologies: ['Python', 'PostgreSQL', 'MySQL', 'Odoo'],
+        description: 'UI y backend para cargar procesos de FacturIA, revisar el matching contra padrón y Odoo, editar filas e importar/exportar hacia Odoo.'
       },
       {
-        name: 'E-commerce de Tienda de Calzado',
-        technologies: ['CodeIgniter', 'PHP', 'SQL', 'HTML', 'CSS', 'Bootstrap'],
-        description: 'Desarrollo de una tienda funcional utilizando CodeIgniter, PHP, SQL, HTML, CSS y Bootstrap.'
+        name: 'Mapas de calor inmobiliarios',
+        context: 'SuData',
+        technologies: ['Python', 'GCP', 'PostGIS', 'ML'],
+        description: 'Pipeline de predicción espacial por manzana/radio, exportación geoespacial y publicación de mapas de calor e histogramas de rendimiento.'
       },
       {
-        name: 'Calculadora con Máquinas de Turing',
-        technologies: ['Python'],
-        description: 'Desarrollo de modelos lógicos funcionales utilizando Python.'
+        name: 'Checker de avisos 404',
+        context: 'SuData',
+        technologies: ['Python', 'PostgreSQL', 'GCP'],
+        description: 'Job que verifica enlaces de avisos inmobiliarios, detecta bajas (404/410) y registra novedades en la base para mantener el inventario actualizado.'
       }
     ],
     education: [
@@ -116,7 +144,7 @@ export class CvMauricioEsComponent {
         institution: 'Universidad Nacional del Nordeste',
         degree: 'Licenciatura en Sistemas de Información',
         startDate: 'Marzo 2021',
-        endDate: 'Actualidad'
+        endDate: '2026 (tesis aprobada; trámite pendiente)'
       },
       {
         institution: 'Universidad Nacional del Nordeste',
