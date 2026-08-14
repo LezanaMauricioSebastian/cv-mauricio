@@ -1,6 +1,11 @@
-<nav class="lang-switcher" aria-label="Language">
-  <a routerLink="/cv-es" routerLinkActive="active">ES</a>
-  <a routerLink="/cv-en" routerLinkActive="active">EN</a>
-  <a routerLink="/cv-fi" routerLinkActive="active">FI</a>
+<nav class="toolbar no-print" aria-label="Language">
+  <div class="lang-switcher">
+    <a routerLink="/cv-es" routerLinkActive="active">ES</a>
+    <a routerLink="/cv-en" routerLinkActive="active">EN</a>
+    <a routerLink="/cv-fi" routerLinkActive="active">FI</a>
+  </div>
+  <button type="button" class="download-btn" (click)="downloadPdf()">
+    {{ downloadLabel }}
+  </button>
 </nav>
 <router-outlet></router-outlet>
