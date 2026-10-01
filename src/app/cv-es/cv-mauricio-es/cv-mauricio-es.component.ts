@@ -85,9 +85,10 @@ export class CvMauricioEsComponent {
         startDate: 'Abril 2026',
         endDate: 'Mayo 2026',
         highlights: [
-          'Comparé motores de IA en problemas de métodos numéricos (Newton–Raphson, Gauss–Seidel, interpolación, Simpson 1/3, RK4) con prompts estandarizados.',
-          'Implementé referencias en Python y evalué precisión, calidad de código, explicabilidad y tiempos.',
-          'Documenté alucinaciones numéricas y armé recomendaciones de uso ético / prompt engineering para la cátedra.'
+          'Comparé modelos de IA generativa en problemas de métodos numéricos (Newton–Raphson, Gauss–Seidel, interpolación, Simpson 1/3, RK4) con un prompt estandarizado.',
+          'Implementé referencias en Python y contrasté precisión, calidad de código y explicabilidad en un estudio piloto.',
+          'Documenté alucinaciones numéricas y dejé recomendaciones de uso ético para la cátedra.',
+          'Trabajo aprobado en el VII WITE (octubre 2026): «Comparación de modelos de IA generativa en la resolución de problemas en Métodos Computacionales» (C-2026-27).'
         ]
       },
       {
@@ -137,6 +138,14 @@ export class CvMauricioEsComponent {
         context: 'SuData',
         technologies: ['Python', 'PostgreSQL', 'GCP'],
         description: 'Job que verifica enlaces de avisos inmobiliarios, detecta bajas (404/410) y registra novedades en la base para mantener el inventario actualizado.'
+      }
+    ],
+    publications: [
+      {
+        title: 'Comparación de modelos de IA generativa en la resolución de problemas en Métodos Computacionales',
+        venue: 'VII Workshop de Innovación y Transformación Educativa (WITE), UNNOBA',
+        date: 'Octubre 2026',
+        note: 'Trabajo aprobado (C-2026-27). Se publica en el sitio del evento; la versión completa sigue en evaluación para el libro digital.'
       }
     ],
     education: [

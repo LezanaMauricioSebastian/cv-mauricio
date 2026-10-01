@@ -68,6 +68,16 @@
     </div>
   }
 
+  <h3>Julkaisut</h3>
+  @for (publication of info.publications; track publication.title) {
+    <div class="section-item">
+      <p><strong>{{ publication.title }}</strong></p>
+      <p>{{ publication.venue }}</p>
+      <p><small>{{ publication.date }}</small></p>
+      <p>{{ publication.note }}</p>
+    </div>
+  }
+
   <h3>Koulutus</h3>
   @for (edu of info.education; track edu.degree) {
     <div class="section-item">

@@ -84,9 +84,10 @@ export class CvMauricioFiComponent {
         startDate: 'Huhtikuu 2026',
         endDate: 'Toukokuu 2026',
         highlights: [
-          'Vertasin tekoälymalleja numeeristen menetelmien tehtävissä (Newton–Raphson, Gauss–Seidel, interpolointi, Simpson 1/3, RK4) vakioiduilla kehotteilla.',
-          'Toteutin Python-vertailuratkaisut ja arvioin tarkkuutta, koodin laatua, selitettävyyttä ja aikoja.',
-          'Dokumentoin numeerisia hallusinaatioita ja kokosin suosituksia eettisestä käytöstä / prompt engineeringistä kurssille.'
+          'Vertasin generatiivisia tekoälymalleja numeeristen menetelmien tehtävissä (Newton–Raphson, Gauss–Seidel, interpolointi, Simpson 1/3, RK4) vakioidulla kehotteella.',
+          'Toteutin Python-vertailuratkaisut ja vertasin tarkkuutta, koodin laatua ja selitettävyyttä pilottitutkimuksessa.',
+          'Dokumentoin numeerisia hallusinaatioita ja kokosin suosituksia eettisestä käytöstä kurssille.',
+          'Työ hyväksytty VII WITE -tapahtumaan (lokakuu 2026): «Comparación de modelos de IA generativa en la resolución de problemas en Métodos Computacionales» (C-2026-27).'
         ]
       },
       {
@@ -136,6 +137,14 @@ export class CvMauricioFiComponent {
         context: 'SuData',
         technologies: ['Python', 'PostgreSQL', 'GCP'],
         description: 'Työ, joka tarkistaa kiinteistöilmoitusten linkit, havaitsee poistot (404/410) ja kirjaa uutuudet tietokantaan, jotta varasto pysyy ajan tasalla.'
+      }
+    ],
+    publications: [
+      {
+        title: 'Comparación de modelos de IA generativa en la resolución de problemas en Métodos Computacionales',
+        venue: 'VII Workshop on Educational Innovation and Transformation (WITE), UNNOBA',
+        date: 'Lokakuu 2026',
+        note: 'Hyväksytty työ (C-2026-27). Julkaistaan tapahtuman sivustolla; täysversio on vielä arvioitavana digitaalista kirjaa varten.'
       }
     ],
     education: [

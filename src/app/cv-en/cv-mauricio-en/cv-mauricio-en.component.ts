@@ -84,9 +84,10 @@ export class CvMauricioEnComponent {
         startDate: 'April 2026',
         endDate: 'May 2026',
         highlights: [
-          'Compared AI engines on numerical methods problems (Newton–Raphson, Gauss–Seidel, interpolation, Simpson 1/3, RK4) with standardized prompts.',
-          'Implemented Python reference solutions and evaluated accuracy, code quality, explainability, and runtimes.',
-          'Documented numerical hallucinations and produced recommendations on ethical use / prompt engineering for the course.'
+          'Compared generative AI models on numerical methods problems (Newton–Raphson, Gauss–Seidel, interpolation, Simpson 1/3, RK4) with a standardized prompt.',
+          'Implemented Python reference solutions and contrasted accuracy, code quality, and explainability in a pilot study.',
+          'Documented numerical hallucinations and wrote ethical-use recommendations for the course.',
+          'Paper accepted at the VII WITE (October 2026): “Comparación de modelos de IA generativa en la resolución de problemas en Métodos Computacionales” (C-2026-27).'
         ]
       },
       {
@@ -136,6 +137,14 @@ export class CvMauricioEnComponent {
         context: 'SuData',
         technologies: ['Python', 'PostgreSQL', 'GCP'],
         description: 'Job that checks listing URLs, detects takedowns (404/410), and writes novelty records so the inventory stays up to date.'
+      }
+    ],
+    publications: [
+      {
+        title: 'Comparación de modelos de IA generativa en la resolución de problemas en Métodos Computacionales',
+        venue: 'VII Workshop on Educational Innovation and Transformation (WITE), UNNOBA',
+        date: 'October 2026',
+        note: 'Accepted paper (C-2026-27). It will be posted on the event site; the full version is still under review for the digital book.'
       }
     ],
     education: [
